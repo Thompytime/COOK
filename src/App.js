@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Link, Navigate } from 'react-router-dom'; // Changed Router to BrowserRouter
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
@@ -28,7 +28,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>  {/* Changed Router to BrowserRouter */}
+    <Router>
       <div>
         <nav>
           <ul>
@@ -70,7 +70,7 @@ function App() {
           <Route path="/rate-meal" element={<PrivateRoute><ReviewFormPage /></PrivateRoute>} />
         </Routes>
       </div>
-    </BrowserRouter>  {/* Changed Router to BrowserRouter */}
+    </Router>
   );
 }
 
