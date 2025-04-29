@@ -1,16 +1,16 @@
 {
     "version": 2,
     "builds": [
-      { "src": "package.json", "use": "@vercel/static-build" },  // Changed src
+      { "src": "package.json", "use": "@vercel/static-build" },
       { "src": "api/**/*.js", "use": "@vercel/node" }
     ],
     "routes": [
       { "src": "/api/(.*)", "dest": "/api/$1" },
-      { "src": "/(.*)", "dest": "/build/$1" },          // Changed dest
-      { "src": "/(.*)", "dest": "/public/index.html", "continue": true } // Changed dest
+      { "src": "/(.*)", "dest": "/build/$1" },
+      { "src": "/(.*)", "dest": "/public/index.html", "continue": true }
     ],
     "env": {
-      "SUPABASE_URL": "<https://spxxwoynhgstznsvyljh.supabase.co>",
-      "SUPABASE_KEY": "<eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNweHh3b3luaHdzdHpuc3Z5bGpoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU0Mjc1NzIsImV4cCI6MjA2MTAwMzU3Mn0.k5zyAJWr2dU2COn4qMnHwGgTex8X6PDTQc_oWlmEPHE>"
+      "SUPABASE_URL": "https://spxxwoynhgstznsvyljh.supabase.co",
+      "SUPABASE_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNweHh3b2luaHdzdHpuc3Z5bGpoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU0Mjc1NzIsImV4cCI6MjA2MTAwMzU3Mn0.k5zyAJWr2dU2COn4qMnHwGgTex8X6PDTQc_oWlmEPHE"
     }
   }
