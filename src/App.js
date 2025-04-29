@@ -1,5 +1,5 @@
-import React, { useState } from 'react'; // Remove useEffect if not used
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route, Link, Navigate } from 'react-router-dom'; // Changed Router to BrowserRouter
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
@@ -10,7 +10,6 @@ import './App.css';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
-    // Check localStorage for login status on initial load
     return localStorage.getItem('isLoggedIn') === 'true';
   });
 
@@ -24,13 +23,12 @@ function App() {
     localStorage.removeItem('isLoggedIn');
   };
 
-  // Create a PrivateRoute component
   const PrivateRoute = ({ children }) => {
     return isLoggedIn ? children : <Navigate to="/login" />;
   };
 
   return (
-    <Router>
+    <BrowserRouter>  {/* Changed Router to BrowserRouter */}
       <div>
         <nav>
           <ul>
@@ -72,7 +70,7 @@ function App() {
           <Route path="/rate-meal" element={<PrivateRoute><ReviewFormPage /></PrivateRoute>} />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>  {/* Changed Router to BrowserRouter */}
   );
 }
 
