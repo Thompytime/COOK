@@ -1,0 +1,34 @@
+/* src/pages/HomePage.css */
+
+.meal-list-container {
+    display: flex;
+    flex-direction: column; /* Stack meals vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 20px;
+    width: 80%; /* Adjust as needed */
+    margin: 0 auto; /* Center the container itself */
+  }
+  
+  .meal {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%; /* Make each meal take full width of container */
+    text-align: center;
+  }
+  
+  .meal-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .meal-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }

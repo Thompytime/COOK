@@ -1,0 +1,74 @@
+/* src/pages/MealListPage.css */
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+
+.logo-image {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-header {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 2em; /* Match typical h1 size */
+  line-height: 1.2; /* Standardize line height */
+}
+
+.meal-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.meal {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  width: 80%;
+  text-align: center;
+}
+
+.meal-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.meal-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.meal button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.meal button:hover {
+  background-color: #0056b3;
+}

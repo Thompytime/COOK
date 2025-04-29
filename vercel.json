@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "frontend/package.json", "use": "@vercel/next" },
+      { "src": "api/**/*.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/api/(.*)", "dest": "/api/$1" },
+      { "src": "/(.*)", "dest": "/frontend/$1" }
+    ],
+    "env": {
+      "SUPABASE_URL": "<YOUR_SUPABASE_URL>",
+      "SUPABASE_KEY": "<YOUR_SUPABASE_KEY>"
+    }
+  }

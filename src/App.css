@@ -1,3 +1,11 @@
+/* src/App.css */
+
+/* Reset default margins and padding for body and h1 */
+body, h1 {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
