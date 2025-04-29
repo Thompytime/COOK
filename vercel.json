@@ -6,8 +6,9 @@
     ],
     "routes": [
       { "src": "/api/(.*)", "dest": "/api/$1" },
-      { "src": "/(.*)", "dest": "/build/$1" },
-      { "src": "/(.*)", "dest": "/public/index.html", "continue": true }
+      { "src": "/static/(.*)", "dest": "/build/static/$1" },
+      { "src": "/(favicon\\.ico|logo.*\\.png|manifest\\.json)$", "dest": "/public/$1" },
+      { "src": "/(.*)", "dest": "/build/index.html" }
     ],
     "env": {
       "SUPABASE_URL": "https://spxxwoynhgstznsvyljh.supabase.co",
